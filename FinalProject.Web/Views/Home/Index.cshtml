@@ -1,5 +1,4 @@
-﻿
-    <div class="jumbotron">
+﻿    <div class="jumbotron">
         <h1>Lions Paw</h1>
 <!DOCTYPE html>
 <html>
@@ -17,34 +16,106 @@
 </html>
 
         </div>
- <div class="topnav">
-  <a class="active" href="#home">Shoe Size</a>
-  <a href="#about"></a>
-  <a href="#contact"></a>
-  <input type="text" placeholder="Search..">
-</div>
-<div class="topnav">
-  <a class="active" href="#home">Sales</a>
-  <a href="#about"></a>
-  <a href="#contact"></a>
-  <input type="text" placeholder="Search..">
-</div>
-<div class="topnav">
-  <a class="active" href="#home">New Arrvials</a>
-  <a href="#about"></a>
-  <a href="#contact"></a>
-  <input type="text" placeholder="Search..">
-</div>
- <img src='~/images/542.png' class="card-img-top" alt="...">
-    <div style="display: inline-block;">
-    <img src='~/images/nike-air-force-1-lead-1.png.jpeg' class="card-img-top" alt="..." style="width: 500px; height: 500px;">
+ <label for="Mens Size">Choose a size:(Mens&Womens)</label>
 
+<select name="Mens Size" id="Mens Size">
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+<label for="Mens Size">Choose a size:(Mens)</label>
+<label for="Mens Size">Choose a size:(Mens)</label>
+
+
+</select>
 </div>
-<div style="display: inline-block;">
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card {
+            width: 30%;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .card-img-top {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: green;
+        }
+
+        .product-text {
+            color: #333;
+        }
+
+        .order-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src='~/images/nike-air-force-1-lead-1.png.jpeg' class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="product-price">$150</p>
+        <p class="product-text"></p>
+        <button class="order-button" onclick="orderNow('Nike Air Force 1', 150)">Order Now</button>
+    </div>
+</div>
+<div class="card">
     <img src='~/images/Nike-BlackAirForce.webp' class="card-img-top" alt="...">
-</div> <div style="display: inline-block;">
-    <img src='~/images/531.png' class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="product-price">$120</p>
+        <p class="product-text"></p>
+        <button class="order-button" onclick="orderNow('Nike Black Air Force', 120)">Order Now</button>
+    </div>
 </div>
+
+<div class="card">
+    <img src='~/images/531.png' class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="product-price">$100</p>
+        <p class="product-text"></p>
+        <button class="order-button" onclick="orderNow('Product 3', 100)">Order Now</button>
+    </div>
+</div>
+
+<script>
+    function orderNow(productName, price) {
+        alert(`Order placed for ${productName} - $${price}`);
+    }
+</script>
+
+</body>
+</html>
+
+
+
 
 	
     <div class="Company">
@@ -61,5 +132,86 @@
         <h2>Payment Methods</h2>
         <p>Orders can be paid via credit,debit,online payment options, and lion cash.</p>
     </div>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
 
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart 
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i> 
+          <b>3</b>
+        </span>
+      </h4>
+      <p><a href="#">Product 1</a> <span class="price">$150</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$120</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$100</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+</div>
 
