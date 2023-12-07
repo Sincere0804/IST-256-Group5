@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FinalProject.DAL.Models.Category>
+
+@{
+	ViewData["Title"] = "Category";
+}
+
+<h1>Category</h1>
+
+<div class="row">
+
+
+	@foreach (var item in Model)
+	{
+		<div class="col-3">
+			<div class="card ">
+				<div class="card-img">
+					<img src="https://placehold.co/200x200" alt="placeholder image" />
+				</div>
+				<div class="card-header">
+
+					@Html.DisplayFor(modelItem => item.CategoryName)
+				</div>
+			</div>
+			<div class="card-body">
+
+				@Html.DisplayFor(modelItem => item.Description)
+			</div>
+			
+		</div>
+	}
+</div>

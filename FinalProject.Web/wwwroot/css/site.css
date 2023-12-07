@@ -23,3 +23,43 @@
 {
     font-size:.75em;
 }
+.card
+{
+	width: 30%;
+	margin: 20px;
+	display: inline-block;
+}
+
+.card-img-top
+{
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+}
+
+.card-body
+{
+	padding: 10px;
+	text-align: center;
+}
+
+.product-price
+{
+	font-weight: bold;
+	color: green;
+}
+
+.product-text
+{
+	color: #333;
+}
+
+.order-button
+{
+	background-color: #007BFF;
+	color: #fff;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}

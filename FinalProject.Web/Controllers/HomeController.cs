@@ -50,9 +50,9 @@ namespace FinalProject.Web.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			//var model = repo.GetAllCategories().ToList();
-			//return View(model);
-			return View();
+			var model = repo.GetAllCategories().ToList();
+			ViewBag.Images = new List<string> { "/images/1.jpeg", "/images/Nike-BlackAirForce.webp", "/images/531.png" };
+			return View(model);
 		}
 
 		public IActionResult About()
